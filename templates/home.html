@@ -1,0 +1,104 @@
+<!-- Сообщаем браузеру, какого типа документ мы передаем -->
+<!DOCTYPE html>
+
+<!-- Корневой, внешний тег -->
+<html> 
+
+  <!-- Заголовок -->
+  <head>
+
+    <!-- Название вкладки -->
+    <title> Jovian Careers </title>
+
+    <!-- Стили элементов -->
+    <!-- font-size - размер текста -->
+    <!-- font-family - шрифт текста -->
+    <!-- font-weight - толщина текста -->
+    <!-- color - цвет -->
+    <!-- text-align - расположение текста -->
+    <!-- #id - обращение по id (только один элемент) -->
+    <!-- object-fit - чтобы изображение не растягивало сь при изменении размера -->
+    <!-- max_width - ограничение по ширине -->
+    <!-- margin - отступы (сверху, слева, снизу, справа) -->
+    <!-- .class - обращение по классу -->
+    <style>
+
+      h1 {
+        font-size: 40px;
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb(50, 50, 50);
+        text-align: center;
+      }
+
+      #banner {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }
+
+      h2 {
+        font-size: 32px;
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb(100, 100, 100);
+        text-align: center;
+      }
+
+      .bodytext {
+        font-family: Roboto;
+        color: rgb(80, 80, 80);
+      }
+
+      #container {
+        max-width: 720px;
+        margin: 0 auto 0 auto;
+      }
+      
+    </style>
+    
+  </head>
+
+  <!-- Тело -->
+  <body>
+
+    <!-- Дополнительный тег, чтобы добавить id -->
+    <div id="container">
+      
+      <!-- Шапка -->
+      <h1> Jovian Careers </h1>
+  
+      <!-- Изображение -->
+      <!-- Ссылка: основная ссылка, когда открываешь сайт + "/static/banner.jpg (название изображения)" -->
+      <!-- id для идентификации при смене стиля -->
+      <img id="banner" src="https://jovian-careers-website.yuliana2002.repl.co/static/banner.jpg">
+  
+      <!-- Заголовок (меньше шапки) -->
+      <h2> About Jovian </h2>
+  
+      <!-- Параграф, абзац -->
+      <p class="bodytext">
+  
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        
+      </p>
+  
+      <h2> Open Positions </h2>
+  
+      <p class="bodytext"> TODO - Show the jobs here </p>
+
+      <!-- Встроенный стиль -->
+      <div style="text-align:center;">
+        
+        <!-- Кнопка -->
+        <button> Contact Us </button>
+
+        <p> Coperight 2022, Jovian </p>
+        
+      </div>
+
+    </div>
+    
+  </body>
+  
+</html>

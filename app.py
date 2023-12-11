@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 # Создание flask app
 app = Flask(__name__)
@@ -7,7 +7,8 @@ app = Flask(__name__)
 @app.route("/")
 # Функция, которая будет выполняться при запросе к домашней страниц
 def hello_world():
-  return "Hello, world!"
+  # Визуализировать шаблон
+  return render_template("home.html")
 
 # Проверка, что запускаем именно это приложение app.py
 if __name__ == "__main__":
