@@ -10,6 +10,13 @@
     <!-- Название вкладки -->
     <title> Jovian Careers </title>
 
+    <!-- Код из бутстрапа для его подключения -->
+    <!-- Бутстрап используется за счет классов (см. 
+на сайте) -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <!-- Стили элементов -->
     <!-- font-size - размер текста -->
     <!-- font-family - шрифт текста -->
@@ -21,6 +28,7 @@
     <!-- max_width - ограничение по ширине -->
     <!-- margin - отступы (сверху, слева, снизу, справа) -->
     <!-- .class - обращение по классу -->
+    <!--
     <style>
 
       h1 {
@@ -56,6 +64,16 @@
       }
       
     </style>
+    -->
+    <style>
+
+      #banner {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }
+      
+    </style>
     
   </head>
 
@@ -63,37 +81,54 @@
   <body>
 
     <!-- Дополнительный тег, чтобы добавить id -->
-    <div id="container">
+    <!-- <div id="container"> -->
+    <div class="container">
       
       <!-- Шапка -->
-      <h1> Jovian Careers </h1>
+      <!-- С использованием переданных параметров -->
+      <h1 class="text-center mt-4 mb-2"> 
+        
+        {{company_name}} Careers 
+      
+      </h1>
   
       <!-- Изображение -->
       <!-- Ссылка: основная ссылка, когда открываешь сайт + "/static/banner.jpg (название изображения)" -->
       <!-- id для идентификации при смене стиля -->
-      <img id="banner" src="https://jovian-careers-website.yuliana2002.repl.co/static/banner.jpg">
+      <img class="img-fluid" id="banner" src="https://jovian-careers-website.yuliana2002.repl.co/static/banner.jpg">
   
       <!-- Заголовок (меньше шапки) -->
-      <h2> About Jovian </h2>
+      <h2 class="text-center mt-2 mb-4"> About Jovian </h2>
   
       <!-- Параграф, абзац -->
-      <p class="bodytext">
+      <!-- <p class="bodytext"> -->
+      <p class="lead">
   
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         
       </p>
   
-      <h2> Open Positions </h2>
+      <h2 class="text-center mt-2 mb-4"> Open Positions </h2>
   
-      <p class="bodytext"> TODO - Show the jobs here </p>
+      <div> 
+
+        <!-- Отображение jobitem -->
+        {% for job in jobs %}
+
+          {% include 'jobitem.html' %}
+        
+        {% endfor %}
+        
+      </div>
 
       <!-- Встроенный стиль -->
-      <div style="text-align:center;">
+      <!-- <div style="text-align:center;"> -->
+      <div class="text-center">
         
         <!-- Кнопка -->
-        <button> Contact Us </button>
+        <button class="btn btn-prmary btn-lg"> Contact Us </button>
 
-        <p> Coperight 2022, Jovian </p>
+        <p class="mt-4"> Coperight 2022, Jovian </p>
         
       </div>
 
