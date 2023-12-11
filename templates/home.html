@@ -71,6 +71,7 @@
         width: 100%;
         height: 360px;
         object-fit: cover;
+        margin-bottom: 16px;
       }
       
     </style>
@@ -79,6 +80,9 @@
 
   <!-- Тело -->
   <body>
+
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="https://jovian-careers-website.yuliana2002.repl.co/static/banner.jpg">
 
     <!-- Дополнительный тег, чтобы добавить id -->
     <!-- <div id="container"> -->
@@ -95,11 +99,14 @@
       <!-- Изображение -->
       <!-- Ссылка: основная ссылка, когда открываешь сайт + "/static/banner.jpg (название изображения)" -->
       <!-- id для идентификации при смене стиля -->
-      <img class="img-fluid" id="banner" src="https://jovian-careers-website.yuliana2002.repl.co/static/banner.jpg">
+      <!-- <img class="img-fluid" id="banner" src="https://jovian-careers-website.yuliana2002.repl.co/static/banner.jpg"> -->
   
       <!-- Заголовок (меньше шапки) -->
-      <h2 class="text-center mt-2 mb-4"> About Jovian </h2>
-  
+      <!-- <h2 class="text-center mt-2 mb-4"> About Jovian </h2> -->
+
+      <div class="row" style="margin-bottom:16px;">
+
+        <div class="col-md-6">
       <!-- Параграф, абзац -->
       <!-- <p class="bodytext"> -->
       <p class="lead">
@@ -107,6 +114,16 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         
       </p>
+        </div>
+
+        <!-- Не отображать на мобильных устройствах и неполных экранах -->
+        <div class="d-none d-md-block col-md-6">
+
+        <img src="/static/people.jpg" style="height: 320px; border-radius: 4px">
+
+        </div>
+        
+      </div>
   
       <h2 class="text-center mt-2 mb-4"> Open Positions </h2>
   
@@ -127,12 +144,12 @@
         
         <!-- Кнопка -->
         <button class="btn btn-prmary btn-lg"> Contact Us </button>
-
-        <p class="mt-4"> Coperight 2022, Jovian </p>
         
       </div>
 
     </div>
+
+    {% include 'footers.html' %}
     
   </body>
   
